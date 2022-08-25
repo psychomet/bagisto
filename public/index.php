@@ -10,6 +10,7 @@
 |
 */
 
+
 $location = str_replace('\\', '/', getcwd());
 $currentLocation = explode("/", $location);
 $desiredLocation = implode("/", $currentLocation);
@@ -20,6 +21,7 @@ if (file_exists($installFile)) {
 } else {
     $install = null;
 }
+
 
 if (! is_null($install)) {
 
@@ -80,6 +82,7 @@ if (file_exists(__DIR__.'/../storage/framework/maintenance.php')) {
 */
 
 $app = require_once __DIR__.'/../bootstrap/app.php';
+
 
 $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
 
